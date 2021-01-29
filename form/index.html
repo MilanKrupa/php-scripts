@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My form</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap&subset=latin-ext"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="card">
+				<h3>Welcome!</h3>
+				<p>Please, fill this form</p>
+				<form action="./php/script.php" method="POST">
+					<div class="innerWrapper input">
+						<label for="name">Name</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							required
+							autocomplete="off"
+							spellcheck="false"
+						/>
+						<span></span>
+					</div>
+					<div class="innerWrapper input">
+						<label for="surname">Surname</label>
+						<input
+							type="text"
+							name="surname"
+							id="surname"
+							required
+							autocomplete="off"
+							spellcheck="false"
+						/>
+						<span></span>
+					</div>
+
+					<div class="innerWrapper">
+						<p>Gender:</p>
+						<ul>
+							<li>
+								<input
+									type="radio"
+									name="gender"
+									value="man"
+									id="man"
+									required
+								/>
+								<label for="man">man</label>
+							</li>
+							<li>
+								<input
+									type="radio"
+									name="gender"
+									value="woman"
+									id="woman"
+									required
+								/>
+								<label for="woman">woman</label>
+							</li>
+						</ul>
+					</div>
+
+					<div class="innerWrapper">
+						<p>What kind of pets do you have?</p>
+						<ul>
+							<li>
+								<input type="checkbox" name="cat" value="cat" id="cat" />
+								<label for="cat">cat</label>
+							</li>
+							<li>
+								<input type="checkbox" name="dog" value="dog" id="dog" />
+								<label for="dog">dog</label>
+							</li>
+						</ul>
+					</div>
+
+					<div class="innerWrapper">
+						<p>Where do you live?</p>
+						<select name="inhabitancy" required>
+							<option selected disabled hidden>-choose-</option>
+							<option value="countryside">country</option>
+							<option value="town">town</option>
+							<option value="city">city</option>
+							<option value="metropolis">metropolis</option>
+						</select>
+					</div>
+					<div class="innerWrapper reset">
+						<button type="reset">reset</button>
+					</div>
+
+					<button type="submit" class="submit">submit</button>
+				</form>
+			</div>
+			<canvas id="bubbleAnim"></canvas>
+		</div>
+		<script src="js/main.js" type="module"></script>
+	</body>
+</html>

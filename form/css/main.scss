@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #333;
+}
+body {
+	font-family: "Montserrat", sans-serif;
+
+	.wrapper {
+		height: 100vh;
+		background-image: linear-gradient(
+			to top,
+			#f3e7e9 0%,
+			#e3eeff 99%,
+			#e3eeff 100%
+		);
+		overflow: hidden;
+
+		.card {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			min-width: 400px;
+			padding: 7vh 5vh;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 25px 35px #b721ff20;
+
+			.innerWrapper {
+				position: relative;
+				margin: 0 0 3vh;
+				text-align: left;
+				li {
+					list-style: none;
+					display: flex;
+					& label {
+						margin-left: 7px;
+					}
+				}
+				label {
+					font-size: 0.7rem;
+					cursor: pointer;
+				}
+				h2,
+				h3 {
+					font-size: 1.4rem;
+					color: #333;
+					margin: 0 0 1vh;
+				}
+				&.reset {
+					text-align: right;
+					font-size: 16px;
+					button[type="reset"] {
+						color: #333;
+						font-weight: bold;
+						background: none;
+						border: none;
+						outline: none;
+						cursor: pointer;
+						text-decoration: underline;
+						transition: color 0.2s;
+						&:hover {
+							color: #555;
+						}
+					}
+				}
+			}
+
+			.innerWrapper.input {
+				input {
+					width: 100%;
+					background-color: transparent;
+					outline: none;
+					line-height: 1.8rem;
+					font-size: 1.2rem;
+					border-color: transparent;
+				}
+
+				span {
+					&::before,
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 2px;
+						background: rgba(0, 0, 0, 0.1);
+					}
+					&::after {
+						background-image: linear-gradient(
+							to right,
+							#21d4fd 0%,
+							#b721ff 99%,
+							#b721ff 100%
+						);
+						right: 100%;
+						z-index: 2;
+						transition: 0.3s;
+					}
+				}
+				input:focus + span::after,
+				input:active + span::after,
+				input:valid + span::after {
+					right: 0;
+				}
+			}
+			.submit {
+				border: none;
+				font-size: 1.1rem;
+				line-height: 2.5rem;
+				letter-spacing: 1px;
+				outline: none;
+				margin-top: 3vh;
+				background-image: linear-gradient(
+					to right,
+					#21d4fd 0%,
+					#b721ff 99%,
+					#b721ff 100%
+				);
+				border-radius: 50px;
+				color: #fff;
+				box-shadow: 0 5px 10px #b921ff25;
+				cursor: pointer;
+				display: block;
+				width: 102%;
+				text-transform: uppercase;
+				transition: 0.3s;
+				&:hover {
+					box-shadow: 0 5px 10px #b921ff49;
+				}
+			}
+		}
+	}
+}
+
+p {
+	color: #777;
+	font-size: 0.8rem;
+	margin: 0 0 2vh;
+}
+h2 {
+	margin-bottom: 3vh;
+}

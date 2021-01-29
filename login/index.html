@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style/style.css" />
+		<title>Login layout</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<section>
+				<img src="./assets/man.svg" alt="man working" />
+				<form action="sign.php" method="POST" tabindex="-1">
+					<h1>Welcome to our website!</h1>
+					<p>
+						You don't have an account yet? We'll take care of it! Just fill this
+						form and we will put your credentials in our database. We'll be glad
+						to have you onboard!
+					</p>
+					<input
+						type="text"
+						name="rlogin"
+						id="rlogin"
+						required
+						autocomplete="off"
+						placeholder="Login"
+						spellcheck="false"
+						tabindex="-1"
+					/>
+					<input
+						type="password"
+						name="rpassword"
+						id="rpassword"
+						required
+						autocomplete="off"
+						placeholder="Password"
+						spellcheck="false"
+						tabindex="-1"
+					/>
+					<input
+						type="password"
+						name="passwordCheck"
+						id="passwordCheck"
+						required
+						autocomplete="off"
+						placeholder="Confirm password"
+						spellcheck="false"
+						tabindex="-1"
+					/>
+					<button type="submit" tabindex="-1">Register</button>
+				</form>
+			</section>
+			<section>
+				<form action="login.php" method="POST" tabindex="-1">
+					<h1>Welcome back!</h1>
+					<input
+						type="text"
+						name="login"
+						id="login"
+						required
+						autocomplete="off"
+						placeholder="Login"
+						tabindex="-1"
+					/>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						required
+						autocomplete="off"
+						placeholder="Password"
+						tabindex="-1"
+					/>
+					<button type="submit" tabindex="-1">Log in</button>
+				</form>
+				<img src="./assets/woman.svg" alt="woman working" />
+				<p class="switch">
+					Don't have an account? <button tabindex="-1">Register</button>
+				</p>
+			</section>
+			<p class="switch">
+				Have an account? <button tabindex="-1">Log in</button>
+			</p>
+		</div>
+	</body>
+	<script src="./js/script.js"></script>
+</html>
